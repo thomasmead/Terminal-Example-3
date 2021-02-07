@@ -3,11 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		AAF4020D25D0872C00FA3572 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF4020C25D0872C00FA3572 /* main.swift */; };
+		AAF4021625D08ADB00FA3572 /* JulianDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF4021425D08ADB00FA3572 /* JulianDate.swift */; };
+		AAF4021725D08ADB00FA3572 /* testClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF4021525D08ADB00FA3572 /* testClass.swift */; };
+		AAF4021B25D08B2500FA3572 /* DateBuilder in Frameworks */ = {isa = PBXBuildFile; productRef = AAF4021A25D08B2500FA3572 /* DateBuilder */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +28,8 @@
 /* Begin PBXFileReference section */
 		AAF4020925D0872C00FA3572 /* Terminal Example 3 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Terminal Example 3"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAF4020C25D0872C00FA3572 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		AAF4021425D08ADB00FA3572 /* JulianDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JulianDate.swift; sourceTree = "<group>"; };
+		AAF4021525D08ADB00FA3572 /* testClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = testClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAF4021B25D08B2500FA3572 /* DateBuilder in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +64,8 @@
 			isa = PBXGroup;
 			children = (
 				AAF4020C25D0872C00FA3572 /* main.swift */,
+				AAF4021425D08ADB00FA3572 /* JulianDate.swift */,
+				AAF4021525D08ADB00FA3572 /* testClass.swift */,
 			);
 			path = "Terminal Example 3";
 			sourceTree = "<group>";
@@ -78,6 +86,9 @@
 			dependencies = (
 			);
 			name = "Terminal Example 3";
+			packageProductDependencies = (
+				AAF4021A25D08B2500FA3572 /* DateBuilder */,
+			);
 			productName = "Terminal Example 3";
 			productReference = AAF4020925D0872C00FA3572 /* Terminal Example 3 */;
 			productType = "com.apple.product-type.tool";
@@ -105,6 +116,9 @@
 				Base,
 			);
 			mainGroup = AAF4020025D0872C00FA3572;
+			packageReferences = (
+				AAF4021925D08B2500FA3572 /* XCRemoteSwiftPackageReference "DateBuilder" */,
+			);
 			productRefGroup = AAF4020A25D0872C00FA3572 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -119,6 +133,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAF4021625D08ADB00FA3572 /* JulianDate.swift in Sources */,
+				AAF4021725D08ADB00FA3572 /* testClass.swift in Sources */,
 				AAF4020D25D0872C00FA3572 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,6 +297,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AAF4021925D08B2500FA3572 /* XCRemoteSwiftPackageReference "DateBuilder" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nicephoton/DateBuilder.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AAF4021A25D08B2500FA3572 /* DateBuilder */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AAF4021925D08B2500FA3572 /* XCRemoteSwiftPackageReference "DateBuilder" */;
+			productName = DateBuilder;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AAF4020125D0872C00FA3572 /* Project object */;
 }
