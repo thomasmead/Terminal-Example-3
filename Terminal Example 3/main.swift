@@ -17,3 +17,11 @@ print("This change made on macbook")
 print(julian.date.description)
 print("a test change to try merge")
 
+
+print(julian.farFutureDate)
+//print(julian.nextDate().description)
+print(julian.dateString)
+
+print(julian.dateFromString!)
+
+print(julian.components.year!)

@@ -8,13 +8,21 @@
 import Foundation
 import DateBuilder
 
-class JulianDate : DateFormatter{
+class JulianDate {
 
     init(_ a_name:String){
         isSet = false
         date = Date()
         name = a_name
-        super.init()
+        dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .full
+        dateFormatter.timeStyle = .full
+        dateFormatter.dateFormat = "MM/dd/yyyy"
+        dateComponents = DateComponents()
+//        super.init()
+//        self.dateStyle = .full
+//        self.timeStyle = .full
+//      dateString = string(from: Date)
     }
     
 
@@ -25,11 +33,22 @@ class JulianDate : DateFormatter{
     }
     
 //    var dateComponents: DateComponents
+    let farFutureDate = Date.distantFuture
     var isSet: Bool
     var name: String
     let date: Date
+    let dateFormatter : DateFormatter
+    let dateComponents : DateComponents
+    let calendar = Calendar.current
+
+    var dateString : String {return dateFormatter.string(from: date)}
     
-//    var dateComponents = DateComponents
+    var dateFromString : Date? {return dateFormatter.date(from: "12/31/1947")}
+    
+    var components : DateComponents {return  calendar.dateComponents([Calendar.Component.day,Calendar.Component.month, Calendar.Component.year], from: date)}
+    
+    
+    //    var dateComponents = DateComponents
     
 
     func testInout(appendage: String, base: String)-> String {
