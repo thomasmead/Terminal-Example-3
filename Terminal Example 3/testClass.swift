@@ -8,15 +8,26 @@
 import Foundation
 import CoreXLSX
 
+
+
+
 class testClass{
     var name: String
     init(_ a_name: String){
     name = a_name
+    file = XLSXFile(filepath: "/users/thomasmead/Documents/Hobby_Projects/Solar/Parameter_tables/solar_data.xlsx")!
     }
+    
+    let file : XLSXFile
+    
+
     
     func printName(){
         print(name)
     }
+    
+
+    
     
     func removeChar(_ c: Character, s: inout String)-> Int{
 //        var s = s

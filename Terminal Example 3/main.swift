@@ -6,10 +6,17 @@
 //
 
 import Foundation
+import CoreXLSX
 
 print("Hello, World!")
 
 var test = testClass("name")
+
+try test.file.parseWorkbooks()
+var workbook = try test.file.parseWorkbooks()
+var path = try test.file.parseWorksheetPaths()
+//var worksheet = try test.file.parseWorksheet(at: path)
+
 print(test.name)
 var julian = JulianDate("julian_name")
 print(julian.name)
