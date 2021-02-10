@@ -41,6 +41,7 @@ class JulianDate {
     let dateComponents : DateComponents
     let calendar = Calendar.current
 
+
     var dateString : String {return dateFormatter.string(from: date)}
     
     var dateFromString : Date? {return dateFormatter.date(from: "12/31/1947")}
@@ -72,7 +73,7 @@ class JulianDate {
         print(date.timeIntervalSince1970)
     }
     func nextDate() -> String {
-        return date.timeIntervalSince1970.description
+        return ""
     }
     func echo(a_string: String) {
         print(a_string)
