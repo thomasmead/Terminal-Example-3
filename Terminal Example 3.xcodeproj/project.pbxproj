@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA893F8C25D449EF0021B81B /* CoreXLSX in Frameworks */ = {isa = PBXBuildFile; productRef = AA893F8B25D449EF0021B81B /* CoreXLSX */; };
 		AAF4020D25D0872C00FA3572 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF4020C25D0872C00FA3572 /* main.swift */; };
 		AAF4021625D08ADB00FA3572 /* JulianDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF4021425D08ADB00FA3572 /* JulianDate.swift */; };
 		AAF4021725D08ADB00FA3572 /* testClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF4021525D08ADB00FA3572 /* testClass.swift */; };
@@ -37,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA893F8C25D449EF0021B81B /* CoreXLSX in Frameworks */,
 				AAF4021B25D08B2500FA3572 /* DateBuilder in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -88,6 +90,7 @@
 			name = "Terminal Example 3";
 			packageProductDependencies = (
 				AAF4021A25D08B2500FA3572 /* DateBuilder */,
+				AA893F8B25D449EF0021B81B /* CoreXLSX */,
 			);
 			productName = "Terminal Example 3";
 			productReference = AAF4020925D0872C00FA3572 /* Terminal Example 3 */;
@@ -118,6 +121,7 @@
 			mainGroup = AAF4020025D0872C00FA3572;
 			packageReferences = (
 				AAF4021925D08B2500FA3572 /* XCRemoteSwiftPackageReference "DateBuilder" */,
+				AA893F8A25D449EE0021B81B /* XCRemoteSwiftPackageReference "CoreXLSX" */,
 			);
 			productRefGroup = AAF4020A25D0872C00FA3572 /* Products */;
 			projectDirPath = "";
@@ -299,6 +303,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		AA893F8A25D449EE0021B81B /* XCRemoteSwiftPackageReference "CoreXLSX" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CoreOffice/CoreXLSX.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.14.0;
+			};
+		};
 		AAF4021925D08B2500FA3572 /* XCRemoteSwiftPackageReference "DateBuilder" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/nicephoton/DateBuilder.git";
@@ -310,6 +322,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		AA893F8B25D449EF0021B81B /* CoreXLSX */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AA893F8A25D449EE0021B81B /* XCRemoteSwiftPackageReference "CoreXLSX" */;
+			productName = CoreXLSX;
+		};
 		AAF4021A25D08B2500FA3572 /* DateBuilder */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = AAF4021925D08B2500FA3572 /* XCRemoteSwiftPackageReference "DateBuilder" */;

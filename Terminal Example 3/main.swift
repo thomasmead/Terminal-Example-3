@@ -25,3 +25,5 @@ print(julian.dateString)
 print(julian.dateFromString!)
 
 print(julian.components.year!)
+
+print(julian.nextDate())
