@@ -16,10 +16,14 @@ class testClass{
     init(_ a_name: String){
     name = a_name
     file = XLSXFile(filepath: "/users/thomasmead/Documents/Hobby_Projects/Solar/Parameter_tables/solar_data.xlsx")!
+//        do {workbooks = try file.parseWorkbooks()
+//        } catch {
+//            print("error thrown")
+//       }
     }
     
+//    let workbooks : [Workbook]
     let file : XLSXFile
-    
 
     
     func printName(){

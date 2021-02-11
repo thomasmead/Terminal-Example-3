@@ -13,9 +13,31 @@ print("Hello, World!")
 var test = testClass("name")
 
 try test.file.parseWorkbooks()
-var workbook = try test.file.parseWorkbooks()
+var workbooks = try test.file.parseWorkbooks()
 var path = try test.file.parseWorksheetPaths()
-//var worksheet = try test.file.parseWorksheet(at: path)
+var worksheet = try test.file.parseWorksheet(at: path[0])
+
+var workbook = workbooks[0]
+var worksheets = workbook.sheets
+var rows = worksheet.data?.rows
+var row = rows?[1]
+var cells = row?.cells
+var cell = cells?[0]
+var data = cell?.value
+
+for ix in cells!{
+    var type = ix.type
+    var item = ix.value
+    print(type)
+    print(item!)
+}
+
+
+print(path[1])
+print(data!)
+print(cell?.dateValue)
+print(workbook.views!)
+
 
 print(test.name)
 var julian = JulianDate("julian_name")
