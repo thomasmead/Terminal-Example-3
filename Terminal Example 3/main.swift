@@ -14,8 +14,8 @@ var test = testClass("name")
 
 try test.file.parseWorkbooks()
 var workbooks = try test.file.parseWorkbooks()
-var path = try test.file.parseWorksheetPaths()
-var worksheet = try test.file.parseWorksheet(at: path[0])
+var paths = try test.file.parseWorksheetPaths()
+var worksheet = try test.file.parseWorksheet(at: paths[6])
 
 
 var workbook = workbooks[0]
@@ -23,10 +23,20 @@ var worksheets = workbook.sheets
 var rows = worksheet.data?.rows
 var row = rows?[1]
 var cells = row?.cells
-var cell = cells?[0]
+var cell = cells?[1]
 var data = cell?.value
+var cellArray : [Cell]
+row = rows?[3]
+cells = row?.cells
 
-for ix in cells!{
+cellArray = row!.cells
+
+var testString = cellArray[1].value
+testString = cellArray[1].value
+testString = cellArray[4].value
+
+for ix in cellArray{
+    print(ix.value)
     var temp = ix.inlineString
     var type = ix.type
     var item = ix.value
@@ -36,7 +46,7 @@ for ix in cells!{
 }
 
 
-print(path[1])
+print(paths[1])
 print(data!)
 print(cell?.dateValue)
 print(workbook.views!)
