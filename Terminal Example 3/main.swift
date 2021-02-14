@@ -12,15 +12,14 @@ print("Hello, World!")
 
 var test = testClass("name")
 
-try test.file.parseWorkbooks()
-var workbooks = try test.file.parseWorkbooks()
+//try test.file.parseWorkbooks()
 var paths = try test.file.parseWorksheetPaths()
+var workbooks = try test.file.parseWorkbooks()
 var worksheet = try test.file.parseWorksheet(at: paths[4])
-
 
 var workbook = workbooks[0]
 var worksheets = workbook.sheets.items
-//var worksheet = worksheets[0]
+var worksheetFromWorksheets = worksheets[0]
 var rows = worksheet.data?.rows
 var row = rows?[1]
 var cells = row?.cells
@@ -41,10 +40,11 @@ for i in rows!{
     var count = 1
     row = i
     cellArray = row!.cells
+    var item: String
     for ix in 1...cellArray.count-1{
-       var item = cellArray[ix].value
+        item = cellArray[ix].value!
         if item != nil{
-            print("row \(count) - cell \(ix) -- \(item!)")
+            print("row \(count) - cell \(ix) -- \(item)")
         }
         else{
             print("\(ix) was nil")
