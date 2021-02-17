@@ -35,7 +35,7 @@ class JulianDate {
 //    var dateComponents: DateComponents
     let farFutureDate = Date.distantFuture
     var isSet: Bool
-    var name: String
+    var name: String = "default name"
     let date: Date
     let dateFormatter : DateFormatter
     var dateComponents : DateComponents
