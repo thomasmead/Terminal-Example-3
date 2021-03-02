@@ -19,7 +19,7 @@ func revSort (_ int1: Int, _ int2: Int) -> Bool {
 
 var revSortedInts = someInts.sorted(by: revSort(_:_:))
 
-
+//var julian = JulianDate.init(name: "test new init", 1947, 12, 31, 12, 30, 0.5)
 
 var test = testClass("excel name")
 test.printName()
@@ -52,10 +52,17 @@ for (name, path) in try file.parseWorksheetPathsAndNames(workbook: wkb[0]) {
   }
 
 
+var newrows = pathDictionary["inputs"]!.data?.rows ?? []
+var newrow = newrows[2]
+var newcell = newrow.cells[2]
+
+
+print("new cell content \(newcell.value ?? "default") from row \(newrow.cells[3].value ?? "default") from newrows\(newrows[2].cells[2].value)")
+
 //var paths = try test.file.parseWorksheetPaths()
 var paths = try file.parseWorksheetPaths()
 var workbooks = try file.parseWorkbooks()
-var worksheet = try file.parseWorksheet(at: paths[6])
+var worksheet = try file.parseWorksheet(at: paths[0])
 
 var workbook = workbooks[0]
 var worksheets = workbook.sheets.items
@@ -73,7 +80,7 @@ cellArray = row!.cells
 
 var testString = cellArray[1].value
 testString = cellArray[1].value
-testString = cellArray[4].value
+testString = cellArray[0].value
 
 //print(worksheet.data!.rows)
 
@@ -93,31 +100,62 @@ for i in rows!{
 //        else{
 //            print("\(ix) was nil")
         }
-        
+        count += 1
     }
-    count += 1
 
 
-print(paths[1])
+print(paths[0])
 print(data!)
 print(cell?.dateValue)
 print(workbook.views!)
 
 
 print(test.name)
-var julian = JulianDate("test julian name")
+//var julian = JulianDate(name: "test julian name")
+var julian = JulianDate.init(name: "test new init",
+                             -1001,
+                             8,
+                             17,
+                             21,
+                             36,
+                             0)
+
+var testDateComponents = DateComponents.init(
+    calendar: Calendar(identifier: Calendar.Identifier.gregorian),
+    year: -4712,
+    month: 1,
+    day: 1,
+    hour: 12,
+    minute: 0, 
+    second: 0,
+    nanosecond: 0)
+var julianFromComponents = JulianDate.init(name: "new_name", components: testDateComponents)
+print(julian.juliandate())
+//print(julian.term1())
+//print(julian.term2())
+//print(julian.fractionalDayOfMonth())
+//print(julian.gregorianShift())
+print(julianFromComponents.juliandate())
+//print(julianFromComponents.term1())
+//print(julianFromComponents.term2())
+//print(julianFromComponents.fractionalDayOfMonth())
+//print(julianFromComponents.gregorianShift())
+
+print(julian.fractionalDayOfMonth())
+
 print(julian.name)
+print(julian.dateComponents.description)
+print(julianFromComponents.name)
+print(julianFromComponents.dateComponents.description)
 print("This change made on macbook")
 print(julian.date.description)
 print("a test change to try merge")
 
 
-print(julian.farFutureDate)
-//print(julian.nextDate().description)
+
 print(julian.dateString)
 
-print(julian.dateFromString!)
 
-print(julian.components.year!)
+print(julian.dateComponents.year!)
 
 print(julian.nextDate())

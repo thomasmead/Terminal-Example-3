@@ -10,8 +10,7 @@ import DateBuilder
 
 class JulianDate {
 
-    init(_ a_name:String){
-        isSet = false
+        required init(name a_name:String){
         date = Date()
         name = a_name
         dateFormatter = DateFormatter()
@@ -19,59 +18,58 @@ class JulianDate {
         dateFormatter.timeStyle = .full
         dateFormatter.dateFormat = "MM/dd/yyyy"
         dateComponents = DateComponents()
+        
 //        super.init()
 //        self.dateStyle = .full
 //        self.timeStyle = .full
 //      dateString = string(from: Date)
+            calendar = Calendar(identifier: Calendar.Identifier.buddhist)
+    }
+        convenience init(name a_name: String, _ yyyy: Int, _ mm: Int, _ dd: Int, _ hh: Int, _ ss: Int, _ fraction: Double) {
+        self.init(name: a_name)
+        dateComponents.setValue(yyyy, for: .year)
+        dateComponents.year = yyyy
+        dateComponents.month = mm
+        dateComponents.day  = dd
+        dateComponents.hour = hh
+        dateComponents.second = ss
+        dateComponents.nanosecond = Int((fraction * 1000000000).rounded())
+        if dateComponents.date == nil {
+            date = Date()
+            print("Using current as default date")
+        }
+        else {
+            date = dateComponents.date!
+        }
     }
     
+        convenience init(name a_name: String, components comps: DateComponents) {
+            self.init(name: a_name)
+            dateComponents = comps
+            if dateComponents.date == nil {
+                date = Date()
+                print("Using current as default date")
+            }
+            else {
+                date = dateComponents.date!
+            }
+    }
+
 
     
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-//    var dateComponents: DateComponents
-    let farFutureDate = Date.distantFuture
-    var isSet: Bool
+
     var name: String = "default name"
-    let date: Date
+    var date: Date
     let dateFormatter : DateFormatter
     var dateComponents : DateComponents
-    let calendar = Calendar.current
-
+    let calendar : Calendar
 
     var dateString : String {return dateFormatter.string(from: date)}
     
-    var dateFromString : Date? {return dateFormatter.date(from: "12/31/1947")}
-    
-    var components : DateComponents {return  calendar.dateComponents([Calendar.Component.day,Calendar.Component.month, Calendar.Component.year], from: date)}
+//    var components : DateComponents {return  calendar.dateComponents([Calendar.Component.day,Calendar.Component.month, Calendar.Component.year], from: date)}
     
     
-    //    var dateComponents = DateComponents
-    
-
-    func testInout(appendage: String, base: String)-> String {
-        let result = base + appendage
-        return result
-    }
-    
-    
-    func reset() {
-        if isSet == true {
-            isSet = false
-        }
-        else {
-            isSet = true
-        }
-    }
-    func changeName(_ a_name: String) {
-        name = a_name
-    }
-    func currentDate(){
-        print(date.timeIntervalSince1970)
-    }
     func nextDate() -> Date {
         
         let futureDate : Date?
@@ -86,15 +84,54 @@ class JulianDate {
         print(timeInterval)
         futureDate = Calendar.current.date(from: dateComponents)?.addingTimeInterval(timeInterval)
         print(Calendar.current)
-        return futureDate! as Date
         
+        return futureDate! // as Date
     }
-    func echo(a_string: String) {
-        print(a_string)
+    func effectiveYear() -> Int {
+        if dateComponents.month! > 2 {
+            return dateComponents.year!
+        }
+        else{
+            return dateComponents.year! - 1
+        }
     }
-    func number(_ a_num : Double) -> Double {
-        let result = a_num
-        return result
+    func term1() -> Double {
+        return (Double(effectiveYear()) + 4716.0) * 365.25
+    }
+    
+    func term2() -> Double {
+        if dateComponents.month! > 2 {
+            return (Double(dateComponents.month!) + 1) * 30.6001
+        }
+        else {
+            return (Double(dateComponents.month! + 12) + 1) * 30.6001
+        }
+    }
+    
+    func juliandate() -> Double {
+        let terms = Int(term1()) + Int(term2())
+        let answer = Double(terms) + fractionalDayOfMonth() + Double(gregorianShift())
+        return  answer - 1524.5
+    }
+    
+    
+    func fractionalDayOfMonth() -> Double {
+        let day = Double(dateComponents.day!)
+        let hour = Double(dateComponents.hour!)
+        let seconds = Double(dateComponents.second!)
+        let totalSeconds = 24.0 * 60 * 60
+        return day + ((hour * 60.0 * 60) + seconds) / totalSeconds
+
     }
 
+    func gregorianShift() -> Int {
+        if effectiveYear() > 1550 {
+            let a = Int(effectiveYear() / 100)
+            return 2 - a + Int(a / 4)
+        }
+        else {
+            return 0
+        }
+        
+    }
 }

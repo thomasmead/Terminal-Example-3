@@ -15,7 +15,7 @@ class testClass{
     var name: String
     init(_ a_name: String){
     name = a_name
-    file = XLSXFile(filepath: "/users/thomasmead/Documents/Hobby_Projects/Solar/Parameter_tables/solar_data.xlsx")!
+    file = XLSXFile(filepath: "/users/thomasmead/Documents/Hobby_Projects/Solar/Parameter_tables/solar_input_data.xlsx")!
 //        do {workbooks = try file.parseWorkbooks()
 //        } catch {
 //            print("error thrown")
@@ -31,7 +31,12 @@ class testClass{
     }
     
 
-    
+    struct TestStruct : Decodable {
+        let test : Int
+        init(_ n: Int) {
+            test = n
+        }
+    }
     
     func removeChar(_ c: Character, s: inout String)-> Int{
 //        var s = s
