@@ -65,6 +65,7 @@ class JulianDate {
     var year: String
     let dateFormatter : DateFormatter
     var dateComponents : DateComponents
+    let deltaT = 67.0
     let calendar : Calendar
 
     var dateString : String {return dateFormatter.string(from: date)}
@@ -115,15 +116,13 @@ class JulianDate {
         let answer = Double(terms) + fractionalDayOfMonth() + Double(gregorianShift())
         return  answer - 1524.5
     }
-    
-    
+        
     func fractionalDayOfMonth() -> Double {
         let day = Double(dateComponents.day!)
         let hour = Double(dateComponents.hour!)
         let seconds = Double(dateComponents.second!)
         let totalSeconds = 24.0 * 60 * 60
         return day + ((hour * 60.0 * 60) + seconds) / totalSeconds
-
     }
 
     func gregorianShift() -> Int {
@@ -134,6 +133,21 @@ class JulianDate {
         else {
             return 0
         }
-        
+    }
+    
+    func julianEphemerisDay() -> Double {
+        return juliandate() + deltaT / 86400
+    }
+    
+    func julianCentury() -> Double {
+        return (juliandate() - 2451545.0) / 36525
+    }
+    
+    func julianEphemerisCentury() -> Double {
+        return (julianEphemerisDay() - 2451545) / 36525
+    }
+    
+    func julianEphemerisMellennium() -> Double {   //for 2000 standard epoch
+        return julianEphemerisCentury() / 10
     }
 }
