@@ -18,7 +18,7 @@ class JulianDate {
         dateFormatter.timeStyle = .full
         dateFormatter.dateFormat = "MM/dd/yyyy"
         dateComponents = DateComponents()
-        
+        year = ""
 //        super.init()
 //        self.dateStyle = .full
 //        self.timeStyle = .full
@@ -41,6 +41,7 @@ class JulianDate {
         else {
             date = dateComponents.date!
         }
+            year = yyyy.description
     }
     
         convenience init(name a_name: String, components comps: DateComponents) {
@@ -61,6 +62,7 @@ class JulianDate {
 
     var name: String = "default name"
     var date: Date
+    var year: String
     let dateFormatter : DateFormatter
     var dateComponents : DateComponents
     let calendar : Calendar

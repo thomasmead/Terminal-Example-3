@@ -7,12 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA511FB125EEBAD00064C7E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA511FB025EEBAD00064C7E3 /* AppDelegate.swift */; };
+		AA511FB325EEBAD00064C7E3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA511FB225EEBAD00064C7E3 /* ContentView.swift */; };
+		AA511FB525EEBAD20064C7E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA511FB425EEBAD20064C7E3 /* Assets.xcassets */; };
+		AA511FB825EEBAD20064C7E3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA511FB725EEBAD20064C7E3 /* Preview Assets.xcassets */; };
+		AA511FBB25EEBAD20064C7E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA511FB925EEBAD20064C7E3 /* Main.storyboard */; };
+		AA511FC725EEBAD20064C7E3 /* Julian_Date_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA511FC625EEBAD20064C7E3 /* Julian_Date_AppTests.swift */; };
+		AA511FD225EEBAD20064C7E3 /* Julian_Date_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA511FD125EEBAD20064C7E3 /* Julian_Date_AppUITests.swift */; };
+		AA511FE125EEED560064C7E3 /* JulianDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF4021425D08ADB00FA3572 /* JulianDate.swift */; };
 		AA893F8C25D449EF0021B81B /* CoreXLSX in Frameworks */ = {isa = PBXBuildFile; productRef = AA893F8B25D449EF0021B81B /* CoreXLSX */; };
 		AAF4020D25D0872C00FA3572 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF4020C25D0872C00FA3572 /* main.swift */; };
 		AAF4021625D08ADB00FA3572 /* JulianDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF4021425D08ADB00FA3572 /* JulianDate.swift */; };
 		AAF4021725D08ADB00FA3572 /* testClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF4021525D08ADB00FA3572 /* testClass.swift */; };
 		AAF4021B25D08B2500FA3572 /* DateBuilder in Frameworks */ = {isa = PBXBuildFile; productRef = AAF4021A25D08B2500FA3572 /* DateBuilder */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AA511FC325EEBAD20064C7E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AAF4020125D0872C00FA3572 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA511FAD25EEBACF0064C7E3;
+			remoteInfo = "Julian Date App";
+		};
+		AA511FCE25EEBAD20064C7E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AAF4020125D0872C00FA3572 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA511FAD25EEBACF0064C7E3;
+			remoteInfo = "Julian Date App";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		AAF4020725D0872C00FA3572 /* CopyFiles */ = {
@@ -27,6 +52,20 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AA511FAE25EEBACF0064C7E3 /* Julian Date App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Julian Date App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA511FB025EEBAD00064C7E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AA511FB225EEBAD00064C7E3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AA511FB425EEBAD20064C7E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AA511FB725EEBAD20064C7E3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AA511FBA25EEBAD20064C7E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AA511FBC25EEBAD20064C7E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA511FBD25EEBAD20064C7E3 /* Julian_Date_App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Julian_Date_App.entitlements; sourceTree = "<group>"; };
+		AA511FC225EEBAD20064C7E3 /* Julian Date AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Julian Date AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA511FC625EEBAD20064C7E3 /* Julian_Date_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Julian_Date_AppTests.swift; sourceTree = "<group>"; };
+		AA511FC825EEBAD20064C7E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA511FCD25EEBAD20064C7E3 /* Julian Date AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Julian Date AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA511FD125EEBAD20064C7E3 /* Julian_Date_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Julian_Date_AppUITests.swift; sourceTree = "<group>"; };
+		AA511FD325EEBAD20064C7E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AAF4020925D0872C00FA3572 /* Terminal Example 3 */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "compiled.mach-o.executable"; path = "Terminal Example 3"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAF4020C25D0872C00FA3572 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		AAF4021425D08ADB00FA3572 /* JulianDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JulianDate.swift; sourceTree = "<group>"; };
@@ -34,6 +73,27 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		AA511FAB25EEBACF0064C7E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA511FBF25EEBAD20064C7E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA511FCA25EEBAD20064C7E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AAF4020625D0872C00FA3572 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -46,10 +106,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AA511FAF25EEBAD00064C7E3 /* Julian Date App */ = {
+			isa = PBXGroup;
+			children = (
+				AA511FB025EEBAD00064C7E3 /* AppDelegate.swift */,
+				AA511FB225EEBAD00064C7E3 /* ContentView.swift */,
+				AA511FB425EEBAD20064C7E3 /* Assets.xcassets */,
+				AA511FB925EEBAD20064C7E3 /* Main.storyboard */,
+				AA511FBC25EEBAD20064C7E3 /* Info.plist */,
+				AA511FBD25EEBAD20064C7E3 /* Julian_Date_App.entitlements */,
+				AA511FB625EEBAD20064C7E3 /* Preview Content */,
+			);
+			path = "Julian Date App";
+			sourceTree = "<group>";
+		};
+		AA511FB625EEBAD20064C7E3 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				AA511FB725EEBAD20064C7E3 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AA511FC525EEBAD20064C7E3 /* Julian Date AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				AA511FC625EEBAD20064C7E3 /* Julian_Date_AppTests.swift */,
+				AA511FC825EEBAD20064C7E3 /* Info.plist */,
+			);
+			path = "Julian Date AppTests";
+			sourceTree = "<group>";
+		};
+		AA511FD025EEBAD20064C7E3 /* Julian Date AppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AA511FD125EEBAD20064C7E3 /* Julian_Date_AppUITests.swift */,
+				AA511FD325EEBAD20064C7E3 /* Info.plist */,
+			);
+			path = "Julian Date AppUITests";
+			sourceTree = "<group>";
+		};
 		AAF4020025D0872C00FA3572 = {
 			isa = PBXGroup;
 			children = (
 				AAF4020B25D0872C00FA3572 /* Terminal Example 3 */,
+				AA511FAF25EEBAD00064C7E3 /* Julian Date App */,
+				AA511FC525EEBAD20064C7E3 /* Julian Date AppTests */,
+				AA511FD025EEBAD20064C7E3 /* Julian Date AppUITests */,
 				AAF4020A25D0872C00FA3572 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -58,6 +161,9 @@
 			isa = PBXGroup;
 			children = (
 				AAF4020925D0872C00FA3572 /* Terminal Example 3 */,
+				AA511FAE25EEBACF0064C7E3 /* Julian Date App.app */,
+				AA511FC225EEBAD20064C7E3 /* Julian Date AppTests.xctest */,
+				AA511FCD25EEBAD20064C7E3 /* Julian Date AppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -75,6 +181,59 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		AA511FAD25EEBACF0064C7E3 /* Julian Date App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA511FD425EEBAD20064C7E3 /* Build configuration list for PBXNativeTarget "Julian Date App" */;
+			buildPhases = (
+				AA511FAA25EEBACF0064C7E3 /* Sources */,
+				AA511FAB25EEBACF0064C7E3 /* Frameworks */,
+				AA511FAC25EEBACF0064C7E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Julian Date App";
+			productName = "Julian Date App";
+			productReference = AA511FAE25EEBACF0064C7E3 /* Julian Date App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AA511FC125EEBAD20064C7E3 /* Julian Date AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA511FD725EEBAD20064C7E3 /* Build configuration list for PBXNativeTarget "Julian Date AppTests" */;
+			buildPhases = (
+				AA511FBE25EEBAD20064C7E3 /* Sources */,
+				AA511FBF25EEBAD20064C7E3 /* Frameworks */,
+				AA511FC025EEBAD20064C7E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AA511FC425EEBAD20064C7E3 /* PBXTargetDependency */,
+			);
+			name = "Julian Date AppTests";
+			productName = "Julian Date AppTests";
+			productReference = AA511FC225EEBAD20064C7E3 /* Julian Date AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AA511FCC25EEBAD20064C7E3 /* Julian Date AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA511FDA25EEBAD20064C7E3 /* Build configuration list for PBXNativeTarget "Julian Date AppUITests" */;
+			buildPhases = (
+				AA511FC925EEBAD20064C7E3 /* Sources */,
+				AA511FCA25EEBAD20064C7E3 /* Frameworks */,
+				AA511FCB25EEBAD20064C7E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AA511FCF25EEBAD20064C7E3 /* PBXTargetDependency */,
+			);
+			name = "Julian Date AppUITests";
+			productName = "Julian Date AppUITests";
+			productReference = AA511FCD25EEBAD20064C7E3 /* Julian Date AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		AAF4020825D0872C00FA3572 /* Terminal Example 3 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = AAF4021025D0872C00FA3572 /* Build configuration list for PBXNativeTarget "Terminal Example 3" */;
@@ -105,6 +264,17 @@
 				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
+					AA511FAD25EEBACF0064C7E3 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					AA511FC125EEBAD20064C7E3 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = AA511FAD25EEBACF0064C7E3;
+					};
+					AA511FCC25EEBAD20064C7E3 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = AA511FAD25EEBACF0064C7E3;
+					};
 					AAF4020825D0872C00FA3572 = {
 						CreatedOnToolsVersion = 12.4;
 					};
@@ -128,11 +298,67 @@
 			projectRoot = "";
 			targets = (
 				AAF4020825D0872C00FA3572 /* Terminal Example 3 */,
+				AA511FAD25EEBACF0064C7E3 /* Julian Date App */,
+				AA511FC125EEBAD20064C7E3 /* Julian Date AppTests */,
+				AA511FCC25EEBAD20064C7E3 /* Julian Date AppUITests */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		AA511FAC25EEBACF0064C7E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA511FBB25EEBAD20064C7E3 /* Main.storyboard in Resources */,
+				AA511FB825EEBAD20064C7E3 /* Preview Assets.xcassets in Resources */,
+				AA511FB525EEBAD20064C7E3 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA511FC025EEBAD20064C7E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA511FCB25EEBAD20064C7E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		AA511FAA25EEBACF0064C7E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA511FB325EEBAD00064C7E3 /* ContentView.swift in Sources */,
+				AA511FE125EEED560064C7E3 /* JulianDate.swift in Sources */,
+				AA511FB125EEBAD00064C7E3 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA511FBE25EEBAD20064C7E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA511FC725EEBAD20064C7E3 /* Julian_Date_AppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA511FC925EEBAD20064C7E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA511FD225EEBAD20064C7E3 /* Julian_Date_AppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AAF4020525D0872C00FA3572 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -145,7 +371,155 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		AA511FC425EEBAD20064C7E3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AA511FAD25EEBACF0064C7E3 /* Julian Date App */;
+			targetProxy = AA511FC325EEBAD20064C7E3 /* PBXContainerItemProxy */;
+		};
+		AA511FCF25EEBAD20064C7E3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AA511FAD25EEBACF0064C7E3 /* Julian Date App */;
+			targetProxy = AA511FCE25EEBAD20064C7E3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AA511FB925EEBAD20064C7E3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AA511FBA25EEBAD20064C7E3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		AA511FD525EEBAD20064C7E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Julian Date App/Julian_Date_App.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"Julian Date App/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Julian Date App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = "Hobby.Julian-Date-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		AA511FD625EEBAD20064C7E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Julian Date App/Julian_Date_App.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"Julian Date App/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Julian Date App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = "Hobby.Julian-Date-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		AA511FD825EEBAD20064C7E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Julian Date AppTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = "Hobby.Julian-Date-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Julian Date App.app/Contents/MacOS/Julian Date App";
+			};
+			name = Debug;
+		};
+		AA511FD925EEBAD20064C7E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Julian Date AppTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = "Hobby.Julian-Date-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Julian Date App.app/Contents/MacOS/Julian Date App";
+			};
+			name = Release;
+		};
+		AA511FDB25EEBAD20064C7E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Julian Date AppUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Hobby.Julian-Date-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "Julian Date App";
+			};
+			name = Debug;
+		};
+		AA511FDC25EEBAD20064C7E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Julian Date AppUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Hobby.Julian-Date-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "Julian Date App";
+			};
+			name = Release;
+		};
 		AAF4020E25D0872C00FA3572 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -282,6 +656,33 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		AA511FD425EEBAD20064C7E3 /* Build configuration list for PBXNativeTarget "Julian Date App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA511FD525EEBAD20064C7E3 /* Debug */,
+				AA511FD625EEBAD20064C7E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA511FD725EEBAD20064C7E3 /* Build configuration list for PBXNativeTarget "Julian Date AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA511FD825EEBAD20064C7E3 /* Debug */,
+				AA511FD925EEBAD20064C7E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA511FDA25EEBAD20064C7E3 /* Build configuration list for PBXNativeTarget "Julian Date AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA511FDB25EEBAD20064C7E3 /* Debug */,
+				AA511FDC25EEBAD20064C7E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		AAF4020425D0872C00FA3572 /* Build configuration list for PBXProject "Terminal Example 3" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
