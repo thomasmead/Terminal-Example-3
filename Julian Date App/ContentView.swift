@@ -6,27 +6,41 @@
 //
 
 import SwiftUI
+import UniformTypeIdentifiers
 
+struct TextFile{
+    @available(OSX 11.0, *)
+    @State var plainText : UTType
+    static var readableContentTypes = [""]
+}
 struct ContentView: View {
-    @State var julian = JulianDate.init(name: "test new init",
+    @State var julian = JulianDate.init(name: "test new init now",
                                         -1001,
                                         8,
                                         17,
                                         21,
                                         36,
                                         0)
-    @State var year : String = ""
+    @State var year : String = "1998"
 
     var body: some View {
         NavigationView{
             Form {
                 Section(header: Text("Input")){
                     TextField("Date field", text: $year)
-//            .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .foregroundColor(Color.blue)
+                        .frame(maxWidth: 200.0, maxHeight: .infinity)
+                    TextField("Date field", text: $year)
+                        .frame(maxWidth: 200.0, maxHeight: .infinity)
+                    Text("Test Case")
+                    
+                    
+                    
                 }
             }
         }
-        Text(julian.name)
+        Text(julian.name + year)
     }
 }
 

@@ -87,8 +87,12 @@ class JulianDate {
         print(timeInterval)
         futureDate = Calendar.current.date(from: dateComponents)?.addingTimeInterval(timeInterval)
         print(Calendar.current)
-        
+        var nextDay = calendar.nextDate(after: date
+                          , matching: dateComponents,matchingPolicy: .nextTime)
+        print(nextDay?.description)
+
         return futureDate! // as Date
+
     }
     func effectiveYear() -> Int {
         if dateComponents.month! > 2 {

@@ -14,12 +14,34 @@ var someInts = [1,2,3,10,5,6,7,8]
 print(someInts[3])
 var sortedInts = someInts.sorted()
 func revSort (_ int1: Int, _ int2: Int) -> Bool {
-    return int1 > int2 ? true : false
+    return int1 > int2 //? true : false
 }
 
 var revSortedInts = someInts.sorted(by: revSort(_:_:))
 
 //var julian = JulianDate.init(name: "test new init", 1947, 12, 31, 12, 30, 0.5)
+
+let directoryURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+
+let fileURL = URL(fileURLWithPath: "myFile", relativeTo: directoryURL).appendingPathExtension("txt")
+let fileTwoURL = URL(fileURLWithPath: "myFileTwo", relativeTo: directoryURL).appendingPathExtension("txt")
+
+let myString = "June 12, 2021 \n second line \n third line"
+
+let fileData = myString.data(using: .utf8)
+
+
+do {
+ try fileData!.write(to: fileURL)
+ print("File saved: \(fileURL.absoluteURL)")
+} catch {
+ // Catch any errors
+ print(error.localizedDescription)
+}
+
+let fetchedData = try Data(contentsOf: fileURL)
+let savedString = String(data: fetchedData, encoding: .utf8)
+print(savedString ?? "error" )
 
 var test = testClass("excel name")
 test.printName()
@@ -105,7 +127,7 @@ for i in rows!{
 
 
 print(paths[0])
-print(data!)
+print(data)
 print(cell?.dateValue)
 print(workbook.views!)
 
